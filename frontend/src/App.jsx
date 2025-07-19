@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import { Routes, useLocation, Route } from "react-router-dom";
 
 import Home from "./pages/Home";
+import Footer from "./components/Footer";
 
 function App() {
   // checks whether the current path of the website has "owner" included within the url or not.
@@ -16,6 +17,7 @@ function App() {
           <Route path="/" element={<Home />} />
         </Routes>
       </div>
+      <Footer />
     </div>
   );
 }

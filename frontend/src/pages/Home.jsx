@@ -4,6 +4,7 @@ import HotelCards from "../components/HotelCards";
 import FeaturedDestination from "../components/FeaturedDestination";
 import ExclusiveOffers from "../components/ExclusiveOffers";
 import Testimonial from "../components/Testimonials";
+import NewsLetter from "../components/NewsLetter";
 
 function Home() {
   return (
@@ -13,6 +14,7 @@ function Home() {
       <FeaturedDestination />
       <ExclusiveOffers />
       <Testimonial />
+      <NewsLetter />
     </>
   );
 }
