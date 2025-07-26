@@ -7,6 +7,7 @@ import Footer from "./components/Footer";
 import AllRooms from "./pages/AllRooms";
 import RoomDetails from "./pages/RoomDetails";
 import MyBooking from "./pages/MyBooking";
+import HotelReg from "./components/HotelReg";
 
 function App() {
   // checks whether the current path of the website has "owner" included within the url or not.
@@ -15,6 +16,7 @@ function App() {
   return (
     <div className="">
       {isOwnerPath ? "" : <Navbar />}
+      {false && <HotelReg />}
       <div className="min-h-[70vh]">
         <Routes>
           <Route path="/" element={<Home />} />
