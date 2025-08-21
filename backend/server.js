@@ -25,6 +25,10 @@ app.get("/", (req, res) => {
   res.send("API is working");
 });
 
+app.get("/keepitalive", (req, res) => {
+  res.send("Keeping the server alive");
+});
+
 // API for clerk webhook
 app.use("/api/clerk", clerkWebHooks);
 
