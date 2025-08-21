@@ -5,6 +5,7 @@ import "dotenv/config";
 import cors from "cors";
 
 import connectDB from "./configs/database.js";
+import clerkWebHooks from "./controllers/clerkWebHook.js";
 
 const PORT = process.env.PORT || 3000;
 const app = express();
@@ -20,9 +21,12 @@ connectDB()
     console.log("Error, DB connection unsuccessful");
   });
 
-app.use("/", (req, res) => {
+app.get("/", (req, res) => {
   res.send("API is working");
 });
+
+// API for clerk webhook
+app.use("/api/clerk", clerkWebHooks);
 
 // Middlewares
 app.use(clerkMiddleware());
